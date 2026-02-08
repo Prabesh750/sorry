@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forgive Me 😢</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+
+  .card {
+    background: rgba(30, 41, 59, 0.95);
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    width: 360px;
+    box-shadow: 0 0 50px rgba(56,189,248,0.3);
+  }
+
+  h1 {
+    color: #38bdf8;
+    animation: bounce 2s infinite;
+  }
+
+  .heart {
+    font-size: 50px;
+    animation: heartbeat 1.5s infinite;
+    margin: 10px 0 20px 0;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 8px 0;
+    opacity: 0;
+  }
+
+  /* Animations */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>I’m Really Sorry 😔</h1>
+  <div class="heart">❤️</div>
+
+  <p>I was just joking…</p>
+  <p>I am truly really sorry 😢</p>
+  <p>Please don’t block me 😭</p>
+  <p>Don’t stop talking to me 🙏</p>
+  <p>I didn’t mean to hurt your feelings</p>
+  <p>Or joke about it in a bad way 😔</p>
+  <p>Please forgive me… I am sincerely sorry 💙</p>
+</div>
+
+<script>
+  // Animate each paragraph one by one
+  const paragraphs = document.querySelectorAll('.card p');
+  paragraphs.forEach((p, i) => {
+    setTimeout(() => {
+      p.style.opacity = 1;
+      p.style.animation = 'fadeIn 1s forwards';
+    }, i * 1200); // 1.2 seconds between lines
+  });
+</script>
+
+</body>
+</html>
